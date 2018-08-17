@@ -1,7 +1,9 @@
 package com.goforbroke1006.caretaker.parser
 
-trait ParserStrategy {
-  def supports(siteUrl: String)
+import net.ruippeixotog.scalascraper.model.Document
 
-  def parse(siteUrl: String)
+trait ParserStrategy {
+  def supports(siteUrl: String): Boolean
+
+  def parse(doc: Document): Seq[StatItem]
 }
