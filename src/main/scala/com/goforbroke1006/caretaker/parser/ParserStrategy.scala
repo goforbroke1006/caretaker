@@ -5,5 +5,5 @@ import net.ruippeixotog.scalascraper.model.Document
 trait ParserStrategy {
   def supports(siteUrl: String): Boolean
 
-  def parse(doc: Document): Seq[StatItem]
+  def parse(doc: Document): Seq[StatisticsItem]
 }
