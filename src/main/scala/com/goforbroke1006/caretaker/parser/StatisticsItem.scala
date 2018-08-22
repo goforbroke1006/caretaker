@@ -1,5 +1,5 @@
 package com.goforbroke1006.caretaker.parser
 
-class StatisticsItem(name: String, minPrice: Double, afgPrice: Double, maxPrice: Double, roomsCount: Int = -1) {
+class StatisticsItem(val name: String, val minPrice: Double, val afgPrice: Double, val maxPrice: Double, val roomsCount: Int = -1) {
 
 }
