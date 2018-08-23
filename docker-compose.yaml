@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  #  vertica:
+  #    image: jbfavre/vertica:8.1.1-11_debian-8
+  #    ports:
+  #    - 5433:5433
+  mongodb:
+    image: mongo:latest
+    environment:
+    - MONGO_DATA_DIR=/data/db
+    - MONGO_LOG_DIR=/dev/null
+    volumes:
+    - mongodb_data:/data/db
+    ports:
+    - 27017:27017
+    command: mongod --smallfiles --logpath=/dev/null # --quiet
+
+volumes:
+  mongodb_data:
